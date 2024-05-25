@@ -7,21 +7,28 @@
 GET _cluster/health
 ```
 
+<hr>
 
 ##### 2. To get information about nodes:
 ```
 GET _nodes/stats
 ```
 
+<hr>
+
 ##### 3. To get all indexes:
 ```
 GET /_cat/indices
 ```
 
+<hr>
+
 ##### 4. To create a new index:
 ```
 PUT favorite_candy
 ```
+
+<hr>
 
 ##### 5. To index a document:
 ```
@@ -37,6 +44,9 @@ POST favorite_candy/_doc
 > If PUT is used and id is not passed, an error is thrown
 
 > If a PUT call is made with a duplicate id, the record is updated
+
+
+<hr>
 
 
 ##### 6. _create:
@@ -58,12 +68,16 @@ It throws a `version_conflict_engine_exception` with HTTP Status code `409 - Con
 "reason" : "[1]: version conflict, document already exists (current version [2])"
 ```
 
+<hr>
+
 
 ##### 7. To get a document:
 
 ```
 GET favorite_candy/_doc/1
 ```
+
+<hr>
 
 
 ##### 8. To update a document:
@@ -77,7 +91,13 @@ POST favorite_candy/_update/1
 }
 ```
 
+<hr>
+
+
 ##### 9. To delete a document:
 ```
 DELETE favorite_candy/_doc/1
 ```
+
+
+<hr>
