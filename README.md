@@ -2,24 +2,28 @@
 
 ### Basic Commands:
 
-1. To get information about cluster:
+##### 1. To get information about cluster:
 ```
 GET _cluster/health
 ```
 
 
-2. To get information about nodes:
+##### 2. To get information about nodes:
 ```
 GET _nodes/stats
 ```
 
+##### 3. To get all indexes:
+```
+GET /_cat/indices
+```
 
-3. To create a new index:
+##### 4. To create a new index:
 ```
 PUT favorite_candy
 ```
 
-4. To index a document:
+##### 5. To index a document:
 ```
 POST favorite_candy/_doc
 {
@@ -35,7 +39,7 @@ POST favorite_candy/_doc
 > If a PUT call is made with a duplicate id, the record is updated
 
 
-5. _create:
+##### 6. _create:
 
 If I don't want to overwrite my document if I make a PUT call with the same id, _create can be used
 
@@ -55,14 +59,14 @@ It throws a `version_conflict_engine_exception` with HTTP Status code `409 - Con
 ```
 
 
-6. To get a document:
+##### 7. To get a document:
 
 ```
 GET favorite_candy/_doc/1
 ```
 
 
-7. To update a document:
+##### 8. To update a document:
 
 ```
 POST favorite_candy/_update/1
@@ -73,7 +77,7 @@ POST favorite_candy/_update/1
 }
 ```
 
-8. To delete a document:
+##### 9. To delete a document:
 ```
 DELETE favorite_candy/_doc/1
 ```
