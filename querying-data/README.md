@@ -1,4 +1,4 @@
-```
+```js
 GET news_headlines/_search
 ```
 
@@ -7,7 +7,7 @@ This does not hit all records (hits 10000 only)
 <hr>
 
 #### To get total number of hits
-```
+```js
 GET news_headlines/_search
 {
   "track_total_hits": true
@@ -17,7 +17,7 @@ GET news_headlines/_search
 <hr>
 
 #### Querying data within a time range
-```
+```js
 GET news_headlines/_search
 {
   "query": {
@@ -34,7 +34,7 @@ GET news_headlines/_search
 <hr>
 
 #### Aggregation
-```
+```js
 GET news_headlines/_search
 {
   "aggs": {
@@ -53,7 +53,7 @@ GET news_headlines/_search
 #### Combination of query and aggregation
 
 Performs a significant_text aggregation
-```
+```js
 GET news_headlines/_search
 {
   "query": {
@@ -72,7 +72,7 @@ GET news_headlines/_search
 ```
 
 #### Querying multiple keywords
-```
+```js
 GET news_headlines/_search
 {
   "query": {
@@ -93,7 +93,7 @@ The Match query focuses on increasing ***recall***
 
 To increase the precision, use `and` operator
 
-```
+```js
 GET news_headlines/_search
 {
   "query": {
@@ -114,7 +114,7 @@ This returns just 1 record
 
 This query specifies minimum how many of the given keywords should match
 
-```
+```js
 GET news_headlines/_search
 {
   "query": {

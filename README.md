@@ -3,35 +3,35 @@
 ### Basic Commands:
 
 ##### 1. To get information about cluster:
-```
+```js
 GET _cluster/health
 ```
 
 <hr>
 
 ##### 2. To get information about nodes:
-```
+```js
 GET _nodes/stats
 ```
 
 <hr>
 
 ##### 3. To get all indexes:
-```
+```js
 GET /_cat/indices
 ```
 
 <hr>
 
 ##### 4. To create a new index:
-```
+```js
 PUT favorite_candy
 ```
 
 <hr>
 
 ##### 5. To index a document:
-```
+```js
 POST favorite_candy/_doc
 {
   "first_name": "Anna",
@@ -53,7 +53,7 @@ POST favorite_candy/_doc
 
 If I don't want to overwrite my document if I make a PUT call with the same id, _create can be used
 
-```
+```js
 PUT favorite_candy/_create/1
 {
   "first_name": "A",
@@ -63,7 +63,7 @@ PUT favorite_candy/_create/1
 
 It throws a `version_conflict_engine_exception` with HTTP Status code `409 - Conflict`
 
-```
+```js
 "type" : "version_conflict_engine_exception",
 "reason" : "[1]: version conflict, document already exists (current version [2])"
 ```
@@ -73,7 +73,7 @@ It throws a `version_conflict_engine_exception` with HTTP Status code `409 - Con
 
 ##### 7. To get a document:
 
-```
+```js
 GET favorite_candy/_doc/1
 ```
 
@@ -82,7 +82,7 @@ GET favorite_candy/_doc/1
 
 ##### 8. To update a document:
 
-```
+```js
 POST favorite_candy/_update/1
 {
   "doc": {
@@ -95,7 +95,7 @@ POST favorite_candy/_update/1
 
 
 ##### 9. To delete a document:
-```
+```js
 DELETE favorite_candy/_doc/1
 ```
 
